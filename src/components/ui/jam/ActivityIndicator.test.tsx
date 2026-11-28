@@ -9,6 +9,7 @@ describe('<ActivityIndicator />', () => {
     const classNames = [...container.querySelectorAll('[class]')].flatMap((it) => [...it.classList])
 
     expect(classNames).toContain('motion-safe:animate-ping')
+    expect(classNames).toContain('motion-safe:[animation-duration:2.1s]')
     expect(classNames).toContain('motion-safe:animate-in')
     expect(classNames.filter((it) => it.startsWith('animate-'))).toEqual([])
   })
